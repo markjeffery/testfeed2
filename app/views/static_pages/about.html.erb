@@ -1,2 +1,34 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<% provide(:title, 'About') %>
+<h1>BladeLogic Test Feed</h1>
+  <p>This document will show BladeLogic "events" in a feed<br>
+  <h2>Goals</h2>
+  <ul>
+    <li>Clear - Each event would be shown in a simple summary form</li>
+    <li>Concise - Times in an event would include start time and duration - more concise than start time and end time.</li>
+    <li>Readable - results shown graphically where possible, with detailed text displayed as readably as possible.</li>
+    <li>Flexible - work on smartphone, tablet and PC</li>
+  </ul>
+  <h2>Todo</h2>
+  <ul>
+    <li>Create static content</li>
+    <ul>
+      <li>Show how user x created a new package / template would look</li>
+      <li>Show how Compliance Job x completed on y servers would look</li>
+      <li>Show how snapshot job results would look</li>
+      <li>Show how audit job results would look</li>
+      <li>Show how compliance job results would look</li>
+      <li>Show how deployment job results would look</li>
+    </ul>
+    <li>Make it dynamic</li>
+    <ul>
+      <li>Create rails framework for feed</li>
+      <li>Create BladeLogic framework to</li>
+      <ul>
+        <li>use restful interface to browse quickly</li>
+        <li>use blcli over SOAP to get info</li>
+        <li>use blcli to export Job results and present them nicely</li>
+      </ul>
+      <li>Look into using this to get information from other BMC products!</li>
+    </ul>
+  </ul>
+</div> <!-- /container -->
