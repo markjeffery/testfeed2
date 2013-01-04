@@ -5,7 +5,7 @@
   <div class="well well-small">
     <span class="label label-success">Compliance Job Executed</span>    
   	<p>CIS Compliance Job executed on 400 servers</p>
-  	<div class="progress progress-striped">
+  	<div class="progress progress">
   		<div class="bar bar-success" style="width: 35%;">35% Compliant</div>
   		<div class="bar bar-warning" style="width: 40%;">40% Compliant with exceptions</div>
   		<div class="bar bar-danger" style="width: 25%;">25% Non Compliant</div>
@@ -32,5 +32,46 @@
     <p>Release Manager: Mark Jeffery</p>
     <p>Created on: 4-Jan-2013 10:23:00</p>
     <p>Maybe use stacked bars to show sub-requests</p>
+  </div>
+  <div class="well well-small">
+    <span class="label label-success">Compliance Job Executed</span>
+    <p>Medrec [medrec-1.0] (rlm)</p>
+    <div class="progress progress">
+      <div class="bar bar-success" style="width: 33%;">33% Compliant</div>
+      <div class="bar bar-danger" style="width: 66%;">66% Non-Compliant</div>
+    </div>
+    <span class="badge badge-important">1.1 Check JDBC Entry</span>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+"Configuration File Entry:/opt/app/medrec-1.0/MedRec-jdbc.xml//jdbc-data-source/jdbc-driver-params/url"."Value1 as String (All OS)" equals "jdbc:derby://localhost:1527/medrec"
+        </div>
+        <div class="span8">
+"Configuration File Entry:/opt/app/medrec-1.0/MedRec-jdbc.xml//jdbc-data-source/jdbc-driver-params/url"."Value1 as String (All OS)" = "jdbc:derby://localhost:1527/medrec" [[ "Configuration File Entry:/opt/app/medrec-1.0/MedRec-jdbc.xml//jdbc-data-source/jdbc-driver-params/url"."Value1 as String (All OS)" ["jdbc:derby://localhost:1528/medrec"] = "jdbc:derby://localhost:1527/medrec" ]]
+        </div>
+      </div>
+    </div>
+    <span class="badge badge-important">1.2 Check JMS Queue</span>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+"Configuration File Entry:/opt/app/medrec-1.0/MedRec-jms.xml//weblogic-jms/queue/jndi-name"."Value1 as String (All OS)" equals (case sensitive) "com.bea.medrec.jms.RecordToCreateQueue"
+        </div>
+        <div class="span8">
+"Configuration File Entry:/opt/app/medrec-1.0/MedRec-jms.xml//weblogic-jms/queue/jndi-name"."Value1 as String (All OS)" = (case sensitive) "com.bea.medrec.jms.RecordToCreateQueue" [[ "Configuration File Entry:/opt/app/medrec-1.0/MedRec-jms.xml//weblogic-jms/queue/jndi-name"."Value1 as String (All OS)" ["com.bea.medrec.jms.RecordtoCreateQueue"] = (case sensitive) "com.bea.medrec.jms.RecordToCreateQueue" ]]
+        </div>
+      </div>
+    </div>
+    <span class="badge badge-success">1.3 Check Permission of config files</span>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+"File:/opt/app/medrec-1.0/MedRec-jdbc.xml"."Permissions (Unix) (Unix)" equals "0644"
+        </div>
+        <div class="span8">
+Pass
+        </div>
+      </div>
+    </div>
   </div>
 </div> <!-- /container -->
