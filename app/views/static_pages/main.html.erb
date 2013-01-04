@@ -2,10 +2,35 @@
 <div class="container">
 
   <h1>BladeLogic Test Feed</h1>
-  <ul class="nav nav-list">
-    <li><a href="#"><i class="icon-home icon-white"></i> Jobs</a></li>
-    <li><a href="#"><i class="icon-gift"></i> Packages</a></li>
-    <li><a href="#"><i class="icon-hdd"></i> Servers</a></li>
-    <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
-  </ul>
+  <div class="well well-small">
+    <span class="label label-success">Compliance Job Executed</span>    
+  	<p>CIS Compliance Job executed on 400 servers</p>
+  	<div class="progress progress-striped">
+  		<div class="bar bar-success" style="width: 35%;">35% Compliant</div>
+  		<div class="bar bar-warning" style="width: 40%;">40% Compliant with exceptions</div>
+  		<div class="bar bar-danger" style="width: 25%;">25% Non Compliant</div>
+  	</div>
+  </div>
+  <div class="well well-small">
+    <span class="label label-success">Package Created</span>
+    <p>TFS Created a package: StockTrader .Net</p>
+    <p>Version: 2.5</p>
+    <p>Quality: Deploy to QA</p>
+    <p>Issues: A,B,C</p>
+    <p>Stories: D,E,F</p>
+  </div>
+  <div class="well well-small">
+    <span class="label label-important">Deployment Job Executed</span>
+    <p>RPM Executed a Deployment Job: StockTrader .Net</p>
+    <p>Target: QA</p>
+    <p>Status: Failed</p>
+    <p>Expand to show log</p>
+  </div>
+  <div class="well well-small">
+    <span class="label label-info">RPM Lifecycle Started</span>
+    <p>Name: .Net PetStore 3.0.5</p>
+    <p>Release Manager: Mark Jeffery</p>
+    <p>Created on: 4-Jan-2013 10:23:00</p>
+    <p>Maybe use stacked bars to show sub-requests</p>
+  </div>
 </div> <!-- /container -->
