@@ -4,7 +4,8 @@ gem 'rails', '3.2.9'
 # gem 'twitter-bootstrap-rails'
 # gem 'less-rails-bootstrap'
 gem 'bootstrap-sass'
-	
+gem 'sass-rails',   '3.2.5'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -17,7 +18,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '3.2.5'
+
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
 end
