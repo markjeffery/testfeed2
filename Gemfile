@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 # gem 'twitter-bootstrap-rails'
 # gem 'less-rails-bootstrap'
 gem 'bootstrap-sass'
@@ -12,7 +12,6 @@ gem 'sass-rails',   '3.2.5'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
-  gem 'therubyracer'
 end
 
 # Gems used only for assets and not required
