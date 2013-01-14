@@ -1,7 +1,5 @@
 <% provide(:title, 'Main') %>
 <div class="container">
-
-  <h1>BladeLogic Test Feed</h1>
   <div class="well well-small">
     <span class="label label-success">Compliance Job Executed</span>    
   	<p>CIS Compliance Job executed on 400 servers</p>
@@ -12,64 +10,154 @@
   	</div>
   </div>
   <div class="well well-small">
-    <span class="label label-success">Package Created</span>
-    <p>TFS Created a package: StockTrader .Net</p>
-    <p>Version: 2.5</p>
-    <p>Quality: Deploy to QA</p>
-    <p>Issues: A,B,C</p>
-    <p>Stories: D,E,F</p>
+    <button type="button" class="btn btn-mini btn-success" data-toggle="collapse" data-target="#item1">Package Created</button> TFS Created a package: StockTrader .Net
+    <div id="item1" class="collapse out">
+      <table class="table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Version</td>
+          <td>2.5</td>
+        </tr>
+        <tr>
+          <td>Quality</td>
+          <td>Deploy to QA</td>
+        </tr>
+      </table>
+    </div>
   </div>
   <div class="well well-small">
-    <span class="label label-important">Deployment Job Executed</span>
-    <p>RPM Executed a Deployment Job: StockTrader .Net</p>
-    <p>Target: QA</p>
-    <p>Status: Failed</p>
-    <p>Expand to show log</p>
+    <button type="button" class="btn btn-mini btn-danger" data-toggle="collapse" data-target="#item2">Deployment Job Executed</button> RPM Executed a Deployment Job: StockTrader .Net</p>
+    <div id="item2" class="collapse out">
+      <table class="table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Target</td>
+          <td>QA</td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td>Failed</td>
+        </tr>
+      </table>
+      <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#item2-1">Show Log</button>
+      <div id="item2-1" class="collapse out">
+        <table>
+        <tr><td>Participant</td><td>Step</td><td>Attempt</td><td>Date</td><td>Type</td><td>Message</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:26:47 PM</td><td>Info</td><td>Started running the job 'Deploy to Staging' with priority 'NORMAL' on application server 'bl-appserver'(1)</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:26:48 PM</td><td>Info</td><td>Executing work item Deploy Staging Job:Deploy to Staging; Server:Staging;  on application server: bl-appserver</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:27:24 PM</td><td>Info</td><td>Executing work item Deploy Apply Job (Pre-Execute):Deploy to Staging; Server:Staging;  on application server: bl-appserver</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:29:23 PM</td><td>Info</td><td>Executing work item Deploy Apply Job (Post-Execute):Deploy to Staging; Server:Staging;  on application server: bl-appserver</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:29:23 PM</td><td>Info</td><td>The job 'Deploy to Staging' has succeeded</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:31:03 PM</td><td>Info</td><td>Started running the job 'undo' with priority 'NORMAL' on application server 'bl-appserver'(1)</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:31:04 PM</td><td>Info</td><td>Executing work item Deploy Undo Job (Pre-Execute):Deploy to Staging; Server:Staging;  on application server: bl-appserver</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:31:28 PM</td><td>Info</td><td>Executing work item Deploy Undo Job (Post-Execute):Deploy to Staging; Server:Staging;  on application server: bl-appserver</td></tr>
+        <tr><td>run level log</td><td></td><td></td><td>Oct 31</td><td> 2012 4:31:28 PM</td><td>Info</td><td>The job 'undo' has succeeded</td></tr>
+        <tr><td>Staging</td><td>Stage</td><td>1</td><td>Oct 31</td><td> 2012 4:26:49 PM</td><td>Info</td><td>Deploy Staging Job:Deploy to Staging; Server:Staging;  PkgID:"3229-2578.4"; UUID:632641e7f50a3118a9a149d4f696fd97</td></tr>
+        <tr><td>Staging</td><td>Stage</td><td>1</td><td>Oct 31</td><td> 2012 4:26:49 PM</td><td>Info</td><td>Started running the deploy step job 'Deploy to Staging->Deploy to Staging' on application server 'bl-appserver'(1) against target server 'Staging</td></tr>
+        <tr><td>Staging</td><td>Stage</td><td>1</td><td>Oct 31</td><td> 2012 4:26:49 PM</td><td>Info</td><td>Checking size of '//bl-appserver/C/Program Files/BMC Software/BladeLogic/8.1/NSH/storage/imported/1305555862701/blpackages/3229</td></tr>
+        <tr><td>Staging</td><td>Stage</td><td>1</td><td>Oct 31</td><td> 2012 4:26:49 PM</td><td>Info</td><td>Package on server bl-appserver is 43414978 bytes in size.</td></tr>
+        <tr><td>Staging</td><td>Stage</td><td>1</td><td>Oct 31</td><td> 2012 4:26:50 PM</td><td>Info</td><td>Staging directory on server Staging has 1871585280 bytes available.</td></tr>
+        <tr><td>Staging</td><td>Stage</td><td>1</td><td>Oct 31</td><td> 2012 4:27:22 PM</td><td>Info</td><td>The job 'Deploy to Staging->Deploy to Staging' has succeeded on server Staging</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:27:24 PM</td><td>Info</td><td>Deploy Apply Job (Pre-Execute):Deploy to Staging; Server:Staging;  PkgID:"3229-2578.4"; UUID:632641e7f50a3118a9a149d4f696fd97</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:27:24 PM</td><td>Info</td><td>Started running the deploy step job 'Deploy to Staging->Deploy to Staging' on application server 'bl-appserver'(1) against target server 'Staging</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:27:32 PM</td><td>Info</td><td>Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) started</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:27:37 PM</td><td>Info</td><td>"Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) initialized</td><td> entering wait queue for processing</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:27:37 PM</td><td>Info</td><td>Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) processing instructions</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:29:21 PM</td><td>Info</td><td>Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) completed. exitCode = 0 (Apply successful)</td></tr>
+        <tr><td>Staging</td><td>Commit</td><td>1</td><td>Oct 31</td><td> 2012 4:29:23 PM</td><td>Info</td><td>The job 'Deploy to Staging->Deploy to Staging' has succeeded on server Staging</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:04 PM</td><td>Info</td><td>Deploy Undo Job (Pre-Execute):Deploy to Staging; Server:Staging;  PkgID:"3229-2578.4"; UUID:632641e7f50a3118a9a149d4f696fd97</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:04 PM</td><td>Info</td><td>Started running the deploy step job 'Deploy to Staging->Deploy to Staging' on application server 'bl-appserver'(1) against target server 'Staging</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:04 PM</td><td>Info</td><td>Using undo directory: //Staging/C/Program Files/BMC Software/BladeLogic/8.1/RSCD/Transactions/632641e7f50a3118a9a149d4f696fd97</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:06 PM</td><td>Info</td><td>Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) started</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:09 PM</td><td>Info</td><td>"Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) initialized</td><td> entering wait queue for processing</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:09 PM</td><td>Info</td><td>Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) processing instructions</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:26 PM</td><td>Info</td><td>Package ".NET Stock Trader - Web Tier" UUID(632641e7f50a3118a9a149d4f696fd97) completed. exitCode = 0 (Undo successful)</td></tr>
+        <tr><td>Staging</td><td>Rollback</td><td>1</td><td>Oct 31</td><td> 2012 4:31:28 PM</td><td>Info</td><td>The job 'Deploy to Staging->Deploy to Staging' has succeeded on server Staging</td></tr>
+        </table>
+      </div>
+    </div>
   </div>
   <div class="well well-small">
-    <span class="label label-info">RPM Lifecycle Started</span>
-    <p>Name: .Net PetStore 3.0.5</p>
-    <p>Release Manager: Mark Jeffery</p>
-    <p>Created on: 4-Jan-2013 10:23:00</p>
-    <p>Maybe use stacked bars to show sub-requests</p>
+    <button type="button" class="btn btn-mini btn-warning" data-toggle="collapse" data-target="#item3">RPM Lifecycle Started</button> StockTrader .Net Major Release</p>
+    <div id="item3" class="collapse out">
+      <table class="table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Name</td>
+          <td>.Net PetStore 3.0.5</td>
+        </tr>
+        <tr>
+          <td>Release Manager</td>
+          <td>Mark Jeffery</td>
+        </tr>
+        <tr>
+          <td>Created on</td>
+          <td>4-Jan-2013 10:23:00</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>.Net PetStore 3.0.5</td>
+        </tr>
+      </table>
+    </div>
   </div>
   <div class="well well-small">
-    <span class="label label-success">Compliance Job Executed</span>
-    <p>Medrec [medrec-1.0] (rlm)</p>
+    <span class="label label-success">Compliance Job Executed</span> Medrec [medrec-1.0] (rlm)</p>
     <div class="progress progress">
       <div class="bar bar-success" style="width: 33%;">33% Compliant</div>
       <div class="bar bar-danger" style="width: 66%;">66% Non-Compliant</div>
     </div>
-    <span class="badge badge-important">1.1 Check JDBC Entry</span>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span4">
-"Configuration File Entry:/opt/app/medrec-1.0/MedRec-jdbc.xml//jdbc-data-source/jdbc-driver-params/url"."Value1 as String (All OS)" equals "jdbc:derby://localhost:1527/medrec"
-        </div>
-        <div class="span8">
-"jdbc:derby://localhost:1528/medrec" = "jdbc:derby://localhost:1527/medrec"
-        </div>
-      </div>
-    </div>
-    <span class="badge badge-important">1.2 Check JMS Queue</span>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span4">
-"Configuration File Entry:/opt/app/medrec-1.0/MedRec-jms.xml//weblogic-jms/queue/jndi-name"."Value1 as String (All OS)" equals (case sensitive) "com.bea.medrec.jms.RecordToCreateQueue"
-        </div>
-        <div class="span8">
-"com.bea.medrec.jms.RecordtoCreateQueue" = "com.bea.medrec.jms.RecordToCreateQueue"
+    <button type="button" class="btn btn-mini btn-danger" data-toggle="collapse" data-target="#1_1">1.1 Check JDBC Entry</button>
+     <div id="1_1" class="collapse out">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span4">
+    "Configuration File Entry:/opt/app/medrec-1.0/MedRec-jdbc.xml//jdbc-data-source/jdbc-driver-params/url"."Value1 as String (All OS)" equals "jdbc:derby://localhost:1527/medrec"
+          </div>
+          <div class="span8">
+    "jdbc:derby://localhost:1528/medrec" = "jdbc:derby://localhost:1527/medrec"
+          </div>
         </div>
       </div>
     </div>
-    <span class="badge badge-success">1.3 Check Permission of config files</span>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span4">
-"File:/opt/app/medrec-1.0/MedRec-jdbc.xml"."Permissions (Unix) (Unix)" equals "0644"
+    <button type="button" class="btn btn-mini btn-danger" data-toggle="collapse" data-target="#1_2">1.2 Check JMS Entry</button>
+    <div id="1_2" class="collapse out">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span4">
+  "Configuration File Entry:/opt/app/medrec-1.0/MedRec-jms.xml//weblogic-jms/queue/jndi-name"."Value1 as String (All OS)" equals (case sensitive) "com.bea.medrec.jms.RecordToCreateQueue"
+          </div>
+          <div class="span8">
+  "com.bea.medrec.jms.RecordtoCreateQueue" = "com.bea.medrec.jms.RecordToCreateQueue"
+          </div>
         </div>
-        <div class="span8">
-Pass
+      </div>
+    </div>
+    <button type="button" class="btn btn-mini btn-success" data-toggle="collapse" data-target="#1_3">1.3 Check Permission of config files</button>
+    <div id="1_3" class="collapse out">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span4">
+  "File:/opt/app/medrec-1.0/MedRec-jdbc.xml"."Permissions (Unix) (Unix)" equals "0644"
+          </div>
+          <div class="span8">
+  Pass
+          </div>
         </div>
       </div>
     </div>
